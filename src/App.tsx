@@ -7,18 +7,19 @@ import Benefits from "./scenes/benefits";
 import OurClasses from "./scenes/ourClasses";
 import ContactUs from "./scenes/contactUs";
 import Footer from "./scenes/footer";
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
 
-  const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
+  const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Başlanğıc)
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY === 1) {
         setIsTopOfPage(true)
-        setSelectedPage(SelectedPage.Home)
+        setSelectedPage(SelectedPage.Başlanğıc)
       }
       if (window.scrollY !== 0) {
         setIsTopOfPage(false)
@@ -38,6 +39,16 @@ function App() {
       <OurClasses setSelectedPage={setSelectedPage} />
       <ContactUs setSelectedPage={setSelectedPage} />
       <Footer />
+      <ToastContainer position="top-right"
+autoClose={8000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light" />
     </div>
   )
 }

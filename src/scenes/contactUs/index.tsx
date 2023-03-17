@@ -26,9 +26,9 @@ const ContactUs = ({ setSelectedPage }: Props) => {
     };
 
     return (
-        <section id="contactus" className="mx-auto w-5/6 pt-24 pb-32">
+        <section id="əlaqə" className="mx-auto w-5/6 pt-24 pb-32">
             <motion.div
-                onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
+                onViewportEnter={() => setSelectedPage(SelectedPage.Əlaqə)}
             >
                 {/* HEADER */}
                 <motion.div
@@ -43,12 +43,10 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                     }}
                 >
                     <HText>
-                        <span className="text-primary-500">JOIN NOW</span> TO GET IN SHAPE
+                        <span className="text-primary-500">ÜZV OLARAQ</span> İDEAL BƏDƏNƏ SAHİB OLUN
                     </HText>
                     <p className="my-5">
-                        Congue adipiscing risus commodo placerat. Tellus et in feugiat nisl
-                        sapien vel rhoncus. Placerat at in enim pellentesque. Nulla
-                        adipiscing leo egestas nisi elit risus sit. Nunc cursus sagittis.
+                    Hazırda sayt təqdimat məqsədlidir, aşağıdakı anketi doldurmaqla mənə email göndərib veb layihələr üçün müraciət edə bilərsiz.
                     </p>
                 </motion.div>
 
@@ -74,7 +72,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                             <input
                                 className={inputStyles}
                                 type="text"
-                                placeholder="NAME"
+                                placeholder="Ad"
                                 {...register("name", {
                                     required: true,
                                     maxLength: 100,
@@ -107,7 +105,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
 
                             <textarea
                                 className={inputStyles}
-                                placeholder="MESSAGE"
+                                placeholder="Mesaj"
                                 rows={4}
                                 cols={50}
                                 {...register("message", {
@@ -128,7 +126,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                                 type="submit"
                                 className="mt-5 rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:text-white"
                             >
-                                SUBMIT
+                                Göndər
                             </button>
                         </form>
                     </motion.div>
@@ -144,7 +142,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                             visible: { opacity: 1, y: 0 },
                         }}
                     >
-                        <div className="w-full before:absolute before:-bottom-20 before:-right-10 before:z-[-1] md:before:content-evolvetext">
+                        <div className="w-full before:absolute before:-bottom-28 before:-right-10 before:z-[-1] md:before:content-evolvetext">
                             <img
                                 className="w-full"
                                 alt="contact-us-page-graphic"

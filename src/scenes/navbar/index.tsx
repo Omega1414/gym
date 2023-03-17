@@ -5,6 +5,7 @@ import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import ActionButton from "@/shared/ActionButton";
+import { toast } from "react-toastify";
 
 type Props = {
     isTopOfPage: boolean;
@@ -33,30 +34,31 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                             <div className={`${flexBetween} w-full`}>
                                 <div className={`${flexBetween} gap-8 text-sm `}>
                                     <Link
-                                        page="Home"
+                                        page="Başlanğıc"
+                                        
                                         selectedPage={selectedPage}
                                         setSelectedPage={setSelectedPage}
                                     />
                                     <Link
-                                        page="Benefits"
+                                        page="Üstünlüklər"
                                         selectedPage={selectedPage}
                                         setSelectedPage={setSelectedPage}
                                     />
                                     <Link
-                                        page="Our Classes"
+                                        page="Dərslər"
                                         selectedPage={selectedPage}
                                         setSelectedPage={setSelectedPage}
                                     />
                                     <Link
-                                        page="Contact Us"
+                                        page="Əlaqə"
                                         selectedPage={selectedPage}
                                         setSelectedPage={setSelectedPage}
                                     />
                                 </div>
-                                <div className={`${flexBetween} gap-8`}>
-                                    <p>Sign In</p>
+                                <div className={`${flexBetween} gap-8`} onClick={() => toast.info("Sayt təqdimat məqsədlidir, digər saytlarda auth sistemi quraşdırılmışdır")}>
+                                    <p className="cursor-pointer hover:text-amber-500">Daxil ol</p>
                                     <ActionButton setSelectedPage={setSelectedPage}>
-                                        Become a Member
+                                        Üzv ol
                                     </ActionButton>
                                 </div>
                             </div>
@@ -85,22 +87,22 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                     {/* MENU ITEMS */}
                     <div className="ml-[33%] flex flex-col gap-10 text-2xl">
                         <Link
-                            page="Home"
+                            page="Başlanğıc"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                         />
                         <Link
-                            page="Benefits"
+                            page="Üstünlüklər"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                         />
                         <Link
-                            page="Our Classes"
+                            page="Dərslər"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                         />
                         <Link
-                            page="Contact Us"
+                            page="Əlaqə"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                         />

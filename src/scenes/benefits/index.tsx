@@ -9,25 +9,26 @@ import {
 import { motion } from "framer-motion";
 import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
 import Benefit from "./Benefit";
+import { toast } from "react-toastify";
 
 const benefits: Array<BenefitType> = [
     {
         icon: <HomeModernIcon className="h-6 w-6" />,
-        title: "State of the Art Facilities",
+        title: "Ən Müasir Avadanlıqlar",
         description:
-            "Neque adipiscing amet amet enim. Feugiat dolor enim fermentum in a in lectus pellentesque. Ullamcorper et.",
+            "Zalımızda ən müasir avadanlıqlar mövcuddur. Bunun üçün dünyadakı sayılıb seçilən idman zallarını örnək götürmüşük.",
     },
     {
         icon: <UserGroupIcon className="h-6 w-6" />,
-        title: "100's of Diverse Classes",
+        title: "100dən çox qrup",
         description:
-            "Eu ipsum id egestas risus tempus enim semper felis quis. Nec consectetur ac venenatis facilisi est. Eget ac turpis id.",
+            "İdman zalımızda 100dən çox fərqli qruplar mövcuddur, öz istədiyin vaxta və rejimə uyğun qruplara qoşula biləcəksiz",
     },
     {
         icon: <AcademicCapIcon className="h-6 w-6" />,
-        title: "Expert and Pro Trainers",
+        title: "Peşəkar və ekspert məşqçilər",
         description:
-            "Fusce vestibulum aliquam ut cras. Nisl lectus egestas sapien nisl. Lacus at mi sit pellentesque. Congue parturient.",
+            "Məşqçilərimiz ABŞ və Avropada bu sahə üzrə təhsil almış, peşəkar insanlardır. Sizin üçün ən uyğun məşq proqramını tərtib edəcəklərinə əmin olun.",
     },
 ];
 
@@ -44,9 +45,9 @@ type Props = {
 
 const Benefits = ({ setSelectedPage }: Props) => {
     return (
-        <section id="benefits" className="mx-auto min-h-full w-5/6 py-20">
+        <section id="üstünlüklər" className="mx-auto min-h-full w-5/6 py-20">
             <motion.div
-                onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
+                onViewportEnter={() => setSelectedPage(SelectedPage.Üstünlüklər)}
             >
                 {/* HEADER */}
                 <motion.div
@@ -60,11 +61,9 @@ const Benefits = ({ setSelectedPage }: Props) => {
                         visible: { opacity: 1, x: 0 },
                     }}
                 >
-                    <HText>MORE THAN JUST GYM.</HText>
+                    <HText>Fitnessdən daha artıq.</HText>
                     <p className="my-5 text-sm">
-                        We provide world class fitness equipment, trainers and classes to
-                        get you to your ultimate fitness goals with ease. We provide true
-                        care into each and every member.
+                    Sizi son fitness məqsədlərinizə asanlıqla çatdırmaq üçün dünya səviyyəli fitnes avadanlığı, məşqçilər və dərslər təqdim edirik. Biz hər bir üzvə əsl qayğı göstəririk.
                     </p>
                 </motion.div>
 
@@ -112,8 +111,8 @@ const Benefits = ({ setSelectedPage }: Props) => {
                                     }}
                                 >
                                     <HText>
-                                        MILLIONS OF HAPPY MEMBERS GETTING{" "}
-                                        <span className="text-primary-500">FIT</span>
+                                        Yüzlərlə məmnun {" "}
+                                        <span className="text-primary-500">ÜZV</span>
                                     </HText>
                                 </motion.div>
                             </div>
@@ -131,26 +130,18 @@ const Benefits = ({ setSelectedPage }: Props) => {
                             }}
                         >
                             <p className="my-5">
-                                Nascetur aenean massa auctor tincidunt. Iaculis potenti amet
-                                egestas ultrices consectetur adipiscing ultricies enim. Pulvinar
-                                fames vitae vitae quis. Quis amet vulputate tincidunt at in
-                                nulla nec. Consequat sed facilisis dui sit egestas ultrices
-                                tellus. Ullamcorper arcu id pretium sapien proin integer nisl.
-                                Felis orci diam odio.
+                              İdman zalımıza üzv olmaqla yüzlərlə məmnun üzvdən birinə çevrilin. Məşqlərimizə üzv olaraq gümrah həyata və ideal bədən quruluşuna sahib ola bilərsiz.
                             </p>
                             <p className="mb-5">
-                                Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
-                                tellus quam porttitor. Mauris velit euismod elementum arcu neque
-                                facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit
-                                enim mattis odio in risus nunc.
+                                Hazırda sayt təqdimat məqsədli olduğu üçün üzv olmaq mümkün olmayacaqdır, amma əlaqə bölməsindən email göndərərək saytı hazırlayan şəxsə veb layihələr üçün müraciət edə bilərsiz.
                             </p>
                         </motion.div>
 
                         {/* BUTTON */}
-                        <div className="relative mt-16">
+                        <div className="relative mt-16" onClick={() => toast.info("Sayt təqdimat məqsədlidir, digər saytlarda auth sistemi quraşdırılmışdır")}>
                             <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
                                 <ActionButton setSelectedPage={setSelectedPage}>
-                                    Join Now
+                                    Üzv ol
                                 </ActionButton>
                             </div>
                         </div>

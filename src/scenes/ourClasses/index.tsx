@@ -11,33 +11,33 @@ import Class from "./Class";
 
 const classes: Array<ClassType> = [
     {
-        name: "Weight Training Classes",
+        name: "Ağırlıq qaldırma dərsləri",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: image1,
     },
     {
-        name: "Yoga Classes",
+        name: "Yoqa Dərsləri",
         image: image2,
     },
     {
-        name: "Ab Core Classes",
+        name: "Ab Core Dərsləri",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: image3,
     },
     {
-        name: "Adventure Classes",
+        name: "Fiziki Dərslər",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: image4,
     },
     {
-        name: "Fitness Classes",
+        name: "Fitness Dərsləri",
         image: image5,
     },
     {
-        name: "Training Classes",
+        name: "Məşq Dərsləri",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: image6,
@@ -50,9 +50,9 @@ type Props = {
 
 const OurClasses = ({ setSelectedPage }: Props) => {
     return (
-        <section id="ourclasses" className="w-full bg-primary-100 py-40">
+        <section id="dərslər" className="w-full bg-primary-100 py-40">
             <motion.div
-                onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)}
+                onViewportEnter={() => setSelectedPage(SelectedPage.Dərslər)}
             >
                 <motion.div
                     className="mx-auto w-5/6"
@@ -66,12 +66,9 @@ const OurClasses = ({ setSelectedPage }: Props) => {
                     }}
                 >
                     <div className="md:w-3/5">
-                        <HText>OUR CLASSES</HText>
+                        <HText>Dərslərimiz</HText>
                         <p className="py-5">
-                            Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
-                            tellus quam porttitor. Mauris velit euismod elementum arcu neque
-                            facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit
-                            enim mattis odio in risus nunc.
+                           Fitness dərslərimiz müasir avadanlıqlar və peşəkar müəllimlərlə ən üst səviyyədə aparılmaqdadır. Aşağıdakı şəkillərdən dərslərimizdən bəziləri ilə tanış ola bilərsiz.
                         </p>
                     </div>
                 </motion.div>

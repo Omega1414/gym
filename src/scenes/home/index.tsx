@@ -17,11 +17,11 @@ const Home = ({ setSelectedPage }: Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
 
     return (
-        <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
+        <section id="başlanğıc" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
             {/* IMAGE AND MAIN HEADER */}
             <motion.div
                 className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
-                onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+                onViewportEnter={() => setSelectedPage(SelectedPage.Başlanğıc)}
             >
                 {/* MAIN HEADER */}
                 <div className="z-10 mt-32 md:basis-3/5">
@@ -44,9 +44,8 @@ const Home = ({ setSelectedPage }: Props) => {
                         </div>
 
                         <p className="mt-8 text-sm">
-                            Unrivaled Gym. Unparalleled Training Fitness Classes. World Class
-                            Studios to get the Body Shapes That you Dream of.. Get Your Dream
-                            Body Now.
+                         Dünya səviyyəli, mükəmməl idman zalı. Analoqsuz təlim fitness dərsləri. 
+                             Xəyal etdiyiniz bədən formalarını əldə etmək üçün imkan. Elə indi müraciət edin.
                         </p>
                     </motion.div>
 
@@ -63,14 +62,14 @@ const Home = ({ setSelectedPage }: Props) => {
                         }}
                     >
                         <ActionButton setSelectedPage={setSelectedPage}>
-                            Join Now
+                            İndi qoşul
                         </ActionButton>
                         <AnchorLink
                             className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
-                            onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-                            href={`#${SelectedPage.ContactUs}`}
+                            onClick={() => setSelectedPage(SelectedPage.Əlaqə)}
+                            href={`#${SelectedPage.Əlaqə}`}
                         >
-                            <p>Learn More</p>
+                            <p>Daha ətraflı</p>
                         </AnchorLink>
                     </motion.div>
                 </div>
